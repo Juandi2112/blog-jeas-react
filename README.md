@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Falta corregir la opacidad del texto en las imagenes de cada una de las subpaginas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+import { Box, Grid, Typography, useTheme } from "@mui/material";
+import imag from "../../assets/imga";
 
-## Available Scripts
+const CoverImage = () => {
+  const textStyle = {
+    position: "absolute",
+    textAlign: "center",
+  };
 
-In the project directory, you can run:
+  const containerStyle = {
+    backgroundImage: `url(${imag.img7})`,
+    opacity: 0.5,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "relative",
+  };
 
-### `npm start`
+  return (
+    <Box>
+      <Box style={containerStyle}>
+        <Typography variant="h1" style={textStyle}>
+          Consignas
+        </Typography>
+      </Box>
+    </Box>
+  );
+};
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+const InfoContainer = () => {
+  const theme = useTheme();
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  const containerStyle = {
+    padding: theme.spacing(4),
+  };
 
-### `npm test`
+  const imageStyle = {
+    width: "100%",
+    maxWidth: "40rem",
+  };
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  const textStyle = {
+    width: "100%",
+  };
 
-### `npm run build`
+  return (
+    <Box style={containerStyle} marginTop="20px">
+      <Grid container spacing={4}>
+        <Grid item xs={12} md={6}>
+          <img src={imag.img7} style={imageStyle} alt="Imagen" />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Box style={textStyle}>
+            <Typography variant="h1">
+              Juan Esteban Aristizábal Salazar
+            </Typography>
+            <Typography variant="h4" marginTop="5rem">
+              Investigador en Movilidad Urbana
+            </Typography>
+            <Typography variant="h4" marginTop="20px">
+              Maestrando en Ingeniería - Infraestructura y Sistemas de
+              Transporte
+            </Typography>
+            <Typography variant="h4" marginTop="20px">
+              Ingeniero Civil Universidad Nacional de Colombia
+            </Typography>
+          </Box>
+        </Grid>
+      </Grid>
+    </Box>
+  );
+};
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+const Tweets = () => {
+  return (
+    <Box>
+      <CoverImage />
+      <Box>
+        <InfoContainer />
+    
+      </Box>
+    </Box>
+  );
+};
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+export default Tweets;
