@@ -1,88 +1,61 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import imag from "../../assets/imga";
-import { useRef, useEffect } from "react";
+import CoverImage from "../../components/CoverImage";
+import Footer from "../../components/Footer";
+import SeparatorBar from "../../components/SeparatorBar";
+import PdfViewer from "../../components/PdfViewer";
 
-const CoverImage = () => {
-  const theme = useTheme();
-  const imageSrc =
-    "https://images.unsplash.com/photo-1519681393784-d120267933ba";
-
-  const textStyle = {
-    position: "absolute",
-    textAlign: "center",
-  };
-
-  const containerStyle = {
-    backgroundImage: `url(${imageSrc})`,
-    opacity: 0.8,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    height: "100vh",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "relative",
-    backgroundColor: "rgb(153,102,153)",
-  };
-
+const TextFl = () => {
   return (
-    <Box>
-      <Box style={containerStyle}>
-        <Typography variant="h1" style={textStyle}>
-          Acerca de mi
-        </Typography>
-      </Box>
-    </Box>
-  );
-};
-
-const InfoContainer = () => {
-  const theme = useTheme();
-  const imageSrc =
-    "https://images.unsplash.com/photo-1519681393784-d120267933ba";
-
-  const containerStyle = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    padding: theme.spacing(4),
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
-    },
-  };
-
-  const imageStyle = {
-    width: "40%",
-    marginRight: theme.spacing(4),
-  };
-
-  const textStyle = {
-    width: "60%",
-  };
-
-  return (
-    <Box style={containerStyle}>
-      <img src={imageSrc} style={imageStyle} alt="Imagen" />
-      <div style={textStyle}>
-        <Typography variant="h4" gutterBottom>
-          Título de la sección
-        </Typography>
-        <Typography variant="body1" component="div">
-          <p>Texto de ejemplo</p>
-        </Typography>
-      </div>
+    <Box mt="2rem" mb="2rem">
+      <Typography
+        variant="h4"
+        paragraph
+        justifyContent="center"
+        textAlign="justify"
+        sx={{ width: "80%", mx: "auto" }}
+      >
+        Investigador en movilidad urbana de la Universidad Nacional de Colombia.
+        Estudiante de Maestría en Ingeniería - Infraestructura y Sistemas de
+        Transporte. Ingeniero civil y a espera de grado como Especialista en
+        Vías y Transporte (plan de estudios finalizado).
+      </Typography>
+      <Typography
+        variant="h4"
+        paragraph
+        justifyContent="center"
+        textAlign="justify"
+        sx={{ width: "80%", mx: "auto" }}
+      >
+        Estudio las ciudades mediante la investigación científica, aplicando
+        modelación del transporte y ciencia de datos espaciales.
+      </Typography>
+      <Typography
+        variant="h4"
+        justifyContent="center"
+        textAlign="justify"
+        sx={{ width: "80%", mx: "auto" }}
+      >
+        Tengo conocimiento investigativo, técnico y ciudadano en temas de
+        movilidad y planificación urbana. He trabajado en estudios y diseños de
+        infraestructura urbana del transporte. También he trabajado en el sector
+        público en materia de movilidad y transporte. Actualmente tengo un
+        artículo científico publicado en una revista internacional indexada y me
+        encuentro trabajando en otras investigaciones.
+      </Typography>
     </Box>
   );
 };
 
 const About = () => {
   return (
-    <div>
-      <CoverImage />
-      <div>
-        <InfoContainer />
-      </div>
-    </div>
+    <Box>
+      <CoverImage title="Acerca de mí" image={imag.img7} />
+      <TextFl />
+      <SeparatorBar title="Hoja de vida" />
+      <PdfViewer />
+      <Footer />
+    </Box>
   );
 };
 

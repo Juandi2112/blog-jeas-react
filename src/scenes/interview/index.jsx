@@ -1,94 +1,52 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import imag from "../../assets/imga";
+import CoverImage from "../../components/CoverImage";
+import Footer from "../../components/Footer"
+import InterviewList from "../../components/InterviewList";
 
-const CoverImage = () => {
-  const imageSrc =
-    "https://images.unsplash.com/photo-1519681393784-d120267933ba";
+const TextFl = () => {
+  return (
+    <Box mt="2rem" mb="2rem">
+      <Typography
+        variant="h4"
+        paragraph
+        justifyContent="center"
+        textAlign="justify"
+        sx={{ width: "66%", mx: "auto" }}
+      >
+        Con el objetivo de tener un repositorio personal, y que alguna persona
+        interesada pueda acceder a ellas, a continuación dejo los enlaces de
+        algunas entrevistas y notas donde he compartido ideas acerca de
+        movilidad urbana (clic en la imagen respectiva para acceder).
+      </Typography>
+    </Box>
+  );
+};
 
-  const textStyle = {
-    position: "absolute",
-    textAlign: "center",
-  };
-
-  const containerStyle = {
-    backgroundImage: `url(${imageSrc})`,
-    opacity: 0.8,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    minHeight: "100vh",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "relative",
-    backgroundColor: "rgb(153,102,153)",
-  };
+const Index = () => {
 
   return (
     <Box>
-      <Box sx={containerStyle}>
-        <Typography variant="h1" style={textStyle}>
-          Acerca de mi
-        </Typography>
-      </Box>
+      <CoverImage title="Entrevistas" image={imag.img14} />
+      <TextFl />
+      <InterviewList
+        img={imag.img16}
+        link="www.google.com"
+        index="1"
+      />
+      <InterviewList
+        img={imag.img14}
+        link="www.google.com"
+        index="2"
+      />
+      <InterviewList
+        img={imag.img5}
+        link="www.google.com"
+        index="3"
+      />
+      <Footer />
     </Box>
   );
 };
 
-const InfoContainer = () => {
-  const theme = useTheme();
-  const imageSrc =
-    "https://images.unsplash.com/photo-1519681393784-d120267933ba";
-
-  const containerStyle = {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gridTemplateRows: "1fr",
-    alignItems: "center",
-    justifyContent: "space-between",
-    padding: theme.spacing(4),
-    gap: theme.spacing(4),
-    [theme.breakpoints.down("sm")]: {
-      gridTemplateColumns: "1fr",
-      gridTemplateRows: "1fr auto",
-    },
-  };
-
-  const imageStyle = {
-    width: "100%",
-    maxWidth: "40rem",
-    height: "auto",
-    justifySelf: "start",
-    order: theme.breakpoints.down("sm") ? 2 : 1,
-  };
-
-  const textStyle = {
-    display: "flex",
-    flexDirection: "column",
-    order: theme.breakpoints.down("sm") ? 1 : 2,
-  };
-
-  return (
-    <Box sx={containerStyle}>
-      <img src={imageSrc} style={imageStyle} alt="Imagen" />
-      <div style={textStyle}>
-        <Typography variant="h4">Título de la sección</Typography>
-        <Typography>
-          <p>Texto de ejemplo</p>
-        </Typography>
-      </div>
-    </Box>
-  );
-};
-
-const Interview = () => {
-  return (
-    <div>
-      <CoverImage />
-      <div>
-        <InfoContainer />
-      </div>
-    </div>
-  );
-};
-
-export default Interview;
+export default Index;

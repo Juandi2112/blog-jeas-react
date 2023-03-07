@@ -1,102 +1,23 @@
-import { Box, useTheme, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import imag from "../../assets/imga";
-import { useRef, useEffect } from "react";
-import { tokens } from "../../theme";
-
+import CoverImage from "../../components/CoverImage";
+import SeparatorBar from "../../components/SeparatorBar";
+import ContactInfo from "../../components/ContactInfo";
+import Footer from "../../components/Footer";
+import ImageGrid from "../../components/ImageGrid";
+import InfoContainer from "../../components/InfoContainer";
 
 const Index = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
-  
   return (
     <Box>
-      <Box 
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '100vh',
-          backgroundImage: `url(${imag.img7})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          position: 'relative',
-          opacity:"0.3"
-   
-        }}
-      >
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            textAlign: 'center',
-          }}
-        >
-          <Typography
-          variant="h2"
-            style={{
-              fontSize: '3rem',
-              fontWeight: 'bold',
-              opacity:""
-            }}
-          >
-            Inicio
-          </Typography>
-        </Box>
-      </Box>
-      <Box
-        style={{
-          height: '50vh',
-          marginTop: '-4rem',
-          paddingTop: '4rem',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <Box
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-          }}
-        >
-          <img
-            src={imag.img5}
-            alt="imagen"
-            style={{
-              maxWidth: '100%',
-              height: 'auto',
-            }}
-          />
-        </Box>
-        <Box
-          style={{
-            marginLeft: '1rem',
-          }}
-        >
-          <Typography
-            style={{
-              fontSize: '1.5rem',
-              textAlign: 'left',
-              fontWeight: 'bold',
-            }}
-          >
-            Inicio
-          </Typography>
-          <Typography
-            style={{
-              fontSize: '1rem',
-              textAlign: 'left',
-            }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare leo in blandit malesuada. Praesent ultricies tortor et eros consequat, vel dignissim nisi ullamcorper.
-          </Typography>
-        </Box>
-      </Box>
+      <CoverImage title="Inicio" image={imag.img1} />
+      <InfoContainer img={imag.img5}/>
+      <SeparatorBar title="Contacto" />
+      <ContactInfo />
+      <ImageGrid img1={imag.img4} img2={imag.img4} img3={imag.img4} />
+      <Footer />
     </Box>
   );
-}
+};
 
 export default Index;

@@ -23,13 +23,15 @@ const CoverImage = ({ image, title }) => {
   const textStyle = {
     position: "absolute",
     textAlign: "center",
+    fontSize: "3.2rem",
+    fontWeight: "bold",
   };
 
   return (
     <Box>
       <Box style={containerStyle}>
         <Box style={imageStyle} />
-        <Typography variant="h1" style={textStyle}>
+        <Typography variant="h2" style={textStyle}>
           {title}
         </Typography>
       </Box>

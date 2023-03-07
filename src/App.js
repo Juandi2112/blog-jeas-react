@@ -4,8 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import Topbar from "./scenes/global/TopBar";
 import Index from "./scenes/index";
 import About from "./scenes/about";
-import Interview from "./scenes/interview"
-import Tweets from "./scenes/tweets"
+import Interview from "./scenes/interview";
+import Tweets from "./scenes/tweets";
 import ScrollToTop from "./components/ScrollTop";
 
 function App() {
@@ -13,16 +13,16 @@ function App() {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
-        <CssBaseline/>
+        <CssBaseline />
         <div className="app">
           <main className="content">
-            <Topbar/>
-            <ScrollToTop/> 
+            <Topbar />
+            <ScrollToTop />
             <Routes>
-              <Route path="/" element={<Index/>}/>
-              <Route path="/about" element={<About/>}/>
-              <Route path="/interview" element={<Interview/>}/>
-              <Route path="/tweets" element={<Tweets/>}/>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/interview" element={<Interview />} />
+              <Route path="/tweets" element={<Tweets />} />
             </Routes>
           </main>
         </div>

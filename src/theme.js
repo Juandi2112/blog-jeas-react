@@ -77,8 +77,8 @@ export const tokens = (mode) => ({
           100: "#f0e7db",
           200: "#080b12",
           300: "#0c101b",
-          400: "#f2f0f0",
-          500: "#141b2d",
+          400: "#f9f5f1",
+          500: "#f0e7db",
           600: "#434957",
           700: "#727681",
           800: "#a1a4ab",
@@ -127,42 +127,39 @@ export const themeSettings = (mode) => {
   return {
     palette: {
       mode: mode,
-      ...(
-        mode === "dark"
-          ? {
-              primary: {
-                main: colors.primary[500],
-              },
-              secondary: {
-                main: colors.greenAccent[500],
-              },
-              neutral: {
-                dark: colors.grey[700],
-                main: colors.grey[500],
-                light: colors.grey[100],
-              },
-              background: {
-                default: colors.primary[500],
-              },
-
-            }
-          : {
-              primary: {
-                main: colors.primary[100],
-              },
-              secondary: {
-                main: colors.greenAccent[500],
-              },
-              neutral: {
-                dark: colors.grey[700],
-                main: colors.grey[500],
-                light: colors.grey[100],
-              },
-              background: {
-                default: "#f0e7db",
-              },
-            }
-      ),
+      ...(mode === "dark"
+        ? {
+            primary: {
+              main: colors.primary[500],
+            },
+            secondary: {
+              main: colors.greenAccent[500],
+            },
+            neutral: {
+              dark: colors.grey[700],
+              main: colors.grey[500],
+              light: colors.grey[100],
+            },
+            background: {
+              default: colors.primary[500],
+            },
+          }
+        : {
+            primary: {
+              main: colors.primary[100],
+            },
+            secondary: {
+              main: colors.greenAccent[500],
+            },
+            neutral: {
+              dark: colors.grey[700],
+              main: colors.grey[500],
+              light: colors.grey[100],
+            },
+            background: {
+              default: "#f0e7db",
+            },
+          }),
     },
     typography: {
       fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
@@ -211,7 +208,19 @@ export const useMode = () => {
     []
   );
 
-  const theme = useMemo(() => createTheme(themeSettings(mode)),[mode])
+  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
 
-  return [theme, colorMode]
+  return [theme, colorMode];
 };
+
+/* white: {
+       100: "#fcfaf8",
+       200: "#f9f5f1",
+       300: "#f6f1e9",
+       400: "#f3ece2",
+       500: "#f0e7db",
+       600: "#c0b9af",
+       700: "#908b83",
+       800: "#605c58",
+       900: "#302e2c"
+}, */
