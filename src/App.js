@@ -7,6 +7,7 @@ import About from "./scenes/about";
 import Interview from "./scenes/interview";
 import Tweets from "./scenes/tweets";
 import ScrollToTop from "./components/ScrollTop";
+import NotFound from "./scenes/notFound";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -23,6 +24,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/interview" element={<Interview />} />
               <Route path="/tweets" element={<Tweets />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
         </div>

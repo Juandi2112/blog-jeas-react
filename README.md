@@ -1,91 +1,36 @@
-# Falta corregir la opacidad del texto en las imagenes de cada una de las subpaginas
+# HomePage for (Juan Estaban Aristizábal S)
+Showing her personal information, contact info, some of his interviews and outstanding achievements.
 
-import { Box, Grid, Typography, useTheme } from "@mui/material";
-import imag from "../../assets/imga";
 
-const CoverImage = () => {
-  const textStyle = {
-    position: "absolute",
-    textAlign: "center",
-  };
+[domain/](https://www.google.com/)
 
-  const containerStyle = {
-    backgroundImage: `url(${imag.img7})`,
-    opacity: 0.5,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    height: "100vh",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "relative",
-  };
 
-  return (
-    <Box>
-      <Box style={containerStyle}>
-        <Typography variant="h1" style={textStyle}>
-          Consignas
-        </Typography>
-      </Box>
-    </Box>
-  );
-};
+## Stack
 
-const InfoContainer = () => {
-  const theme = useTheme();
+- [React js](https://es.reactjs.org) - A JavaScript library for building user interfaces.
+- [Material UI](https://mui.com) - An open-source React component library that implements Google's Material Design.
 
-  const containerStyle = {
-    padding: theme.spacing(4),
-  };
+## Project structure
 
-  const imageStyle = {
-    width: "100%",
-    maxWidth: "40rem",
-  };
+```
+$PROJECT_ROOT
+│   # Page files
+├── src
+|    ├── scenes
+│   # React component files
+├── src
+|    ├── components
+│   # Non-react modules
+├── src
+│   # Static files
+├── src
+│    ├── assets
+```
 
-  const textStyle = {
-    width: "100%",
-  };
+## License
 
-  return (
-    <Box style={containerStyle} marginTop="20px">
-      <Grid container spacing={4}>
-        <Grid item xs={12} md={6}>
-          <img src={imag.img7} style={imageStyle} alt="Imagen" />
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Box style={textStyle}>
-            <Typography variant="h1">
-              Juan Esteban Aristizábal Salazar
-            </Typography>
-            <Typography variant="h4" marginTop="5rem">
-              Investigador en Movilidad Urbana
-            </Typography>
-            <Typography variant="h4" marginTop="20px">
-              Maestrando en Ingeniería - Infraestructura y Sistemas de
-              Transporte
-            </Typography>
-            <Typography variant="h4" marginTop="20px">
-              Ingeniero Civil Universidad Nacional de Colombia
-            </Typography>
-          </Box>
-        </Grid>
-      </Grid>
-    </Box>
-  );
-};
+MIT License.
 
-const Tweets = () => {
-  return (
-    <Box>
-      <CoverImage />
-      <Box>
-        <InfoContainer />
-    
-      </Box>
-    </Box>
-  );
-};
+Check out [LICENSE](./LICENSE) for more detail.
 
-export default Tweets;
+---

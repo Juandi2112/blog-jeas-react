@@ -55,7 +55,7 @@ const Topbar = () => {
               marginLeft: "15px",
             }}
           >
-            Juan Esteban Aristizabal S
+            Juan Esteban Aristizábal S
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -125,7 +125,7 @@ const Topbar = () => {
             sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
           />
           <Typography
-            variant="h4"
+            variant="h6"
             noWrap
             sx={{
               mr: 2,
@@ -137,7 +137,7 @@ const Topbar = () => {
               textDecoration: "none",
             }}
           >
-            Juan Esteban Aristizabal S
+            Juan Esteban Aristizábal
           </Typography>
           <Box
             sx={{
