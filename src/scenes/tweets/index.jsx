@@ -1,18 +1,29 @@
-import { Box } from "@mui/material";
+import { Box, Grid, Paper } from "@mui/material";
 import imag from "../../assets/imga";
 import CoverImage from "../../components/CoverImage";
 import Footer from "../../components/Footer";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 
+const tweets = [
+  "1512075344269832196",
+  "1633282770960089088",
+  "1633253625517441027",
+];
+
 const Tweet = () => {
   return (
     <Box>
       <CoverImage title="Consignas" image={imag.img6} />
-      <TwitterTweetEmbed
-        data-theme="dark"
-        tweetId="1512075344269832196"
-        placeholder={<p>Loading tweet...</p>}
-      />
+      <Grid container spacing={2} justifyContent="center" mt="2rem">
+        {tweets.map((tweetId) => (
+          <Grid key={tweetId} item xs={12} sm={6} md={4}>
+            <Paper sx={{ p: 2 }}>
+              <TwitterTweetEmbed tweetId={tweetId} placeholder="Loading Tweet..." options={{theme: 'dark' }} />
+            </Paper>
+          </Grid>
+        ))}
+      </Grid>
+      <Footer />
     </Box>
   );
 };

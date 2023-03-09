@@ -12,7 +12,7 @@ const ImageGrid = ({ img1, img2, img3 }) => {
 
   const imageStyle = {
     width: "100%",
-    height: "30rem",
+    height: "90vh",
     objectFit: "cover",
   };
 

@@ -31,6 +31,9 @@ import img30 from "./img/30.jpg";
 import img31 from "./img/31.jpg";
 import img32 from "./img/32.jpg";
 import img33 from "./img/33.png";
+import img34 from "./img/34.jpg";
+import img35 from "./img/35.png";
+import img36 from "./img/36.jpg";
 
 
 
@@ -70,5 +73,8 @@ export default {
   img31: img31,
   img32: img32,
   img33: img33,
+  img34: img34,
+  img35: img35,
+  img36: img36,
   
 };

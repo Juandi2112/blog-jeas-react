@@ -1,4 +1,4 @@
-import { Box, IconButton, useTheme } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SchoolIcon from "@mui/icons-material/School";
@@ -10,7 +10,7 @@ const ContactInfo = () => {
       alignItems="center"
       justifyContent="center"
       display="flex"
-      height="8rem"
+      height="10rem"
     >
       <IconButton href="https://twitter.com/je_aristizabal" target="_blank">
         <TwitterIcon fontSize="large" />

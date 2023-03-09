@@ -1,4 +1,6 @@
-import { Box, Typography } from "@mui/material";
+import { useRef } from "react";
+import { Box, IconButton, Typography } from "@mui/material";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const CoverImage = ({ image, title }) => {
   const containerStyle = {
@@ -23,18 +25,39 @@ const CoverImage = ({ image, title }) => {
   const textStyle = {
     position: "absolute",
     textAlign: "center",
-    fontSize: "3.2rem",
+    fontSize: "5rem",
     fontWeight: "bold",
+  };
+
+
+  const nextSectionRef = useRef(null);
+
+  const handleArrowDownClick = () => {
+    const nextSectionPosition = nextSectionRef.current.getBoundingClientRect();
+    const scrollPosition = nextSectionPosition.y - 64;
+    window.scrollTo({ top: scrollPosition, behavior: "smooth" });
   };
 
   return (
     <Box>
       <Box style={containerStyle}>
-        <Box style={imageStyle} />
+        <Box style={imageStyle}/>
         <Typography variant="h2" style={textStyle}>
           {title}
         </Typography>
+        <IconButton
+          sx={{
+            position: "absolute",
+            bottom: "1rem",
+            color: "white",
+            backgroundColor: "rgba(0, 0, 0, 0)",
+          }}
+          onClick={handleArrowDownClick}
+        >
+          <KeyboardArrowDownIcon sx={{ fontSize: "3rem" }} />
+        </IconButton>
       </Box>
+      <Box ref={nextSectionRef} />
     </Box>
   );
 };

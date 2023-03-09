@@ -14,7 +14,7 @@ const Index = () => {
       <InfoContainer img={imag.img5}/>
       <SeparatorBar title="Contacto" />
       <ContactInfo />
-      <ImageGrid img1={imag.img4} img2={imag.img4} img3={imag.img4} />
+      <ImageGrid img1={imag.img4} img2={imag.img35} img3={imag.img34} />
       <Footer />
     </Box>
   );

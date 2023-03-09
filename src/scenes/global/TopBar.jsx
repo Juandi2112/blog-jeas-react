@@ -127,6 +127,8 @@ const Topbar = () => {
           <Typography
             variant="h6"
             noWrap
+            component={Link}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -229,7 +231,7 @@ const Topbar = () => {
             backgroundColor={colors.primary[900]}
             borderRadius="3px"
           >
-            <IconButton onClick={colorMode.toggleColorMode}>
+            <IconButton onClick={colorMode.toggleColorMode} sx={{ "&:hover": {borderRadius:0}}}>
               {theme.palette.mode === "dark" ? (
                 <LightModeOutlinedIcon />
               ) : (
