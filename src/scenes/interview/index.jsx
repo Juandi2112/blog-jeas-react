@@ -29,6 +29,15 @@ const Interview = () => {
       <CoverImage title="Entrevistas" image={imag.img14} />
       <TextFl />
       <InterviewList
+        img={imag.img37}
+        link="https://centrodeinformacion.manizales.gov.co/hombres-o-mujeres-quienes-son-mas-prudentes-a-la-hora-de-conducir-les-contamos-en-esta-nota/"
+        index="20"
+        tema="Movilidad de las mujeres en Manizales"
+        medio="Prensa Alcaldía de Manizales"
+        fecha="Marzo/2023"
+      />
+      
+      <InterviewList
         img={imag.img16}
         link="https://www.facebook.com/BCNoticiasManizales/videos/1272163050175777"
         index="19"

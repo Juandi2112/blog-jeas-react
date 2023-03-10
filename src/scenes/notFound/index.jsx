@@ -6,7 +6,7 @@ const Error404 = () => {
   return (
     <Box style={{ textAlign: "center", marginTop: "100px" }}>
       <Typography variant="h1" component="h1" gutterBottom >
-        Not found :(
+        Not found :(((((
       </Typography>
       <Typography variant="body1" gutterBottom>
         The page you're looking for was not found.

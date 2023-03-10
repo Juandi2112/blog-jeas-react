@@ -1,4 +1,4 @@
-# HomePage for (Juan Estaban Aristizábal S)
+# HomePage for (Juan Esteban Aristizábal S)
 Showing her personal information, contact info, some of his interviews and outstanding achievements.
 
 

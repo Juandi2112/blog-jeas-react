@@ -34,6 +34,7 @@ import img33 from "./img/33.png";
 import img34 from "./img/34.jpg";
 import img35 from "./img/35.png";
 import img36 from "./img/36.jpg";
+import img37 from "./img/37.jpeg";
 
 
 
@@ -76,5 +77,6 @@ export default {
   img34: img34,
   img35: img35,
   img36: img36,
+  img37: img37,
   
 };

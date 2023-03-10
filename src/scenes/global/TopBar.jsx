@@ -34,9 +34,9 @@ const Topbar = () => {
   };
 
   return (
-    <AppBar position="fixed">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+    <AppBar position="fixed" >
+      <Container maxWidth="xl" >
+        <Toolbar disableGutters > 
           <DirectionsBikeIcon
             sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
           />
@@ -48,9 +48,8 @@ const Topbar = () => {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
               fontWeight: 700,
-              color: colors.greenAccent[500],
+              color: colors.grey[100],
               textDecoration: "none",
               marginLeft: "15px",
             }}
@@ -133,9 +132,9 @@ const Topbar = () => {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
+             
               fontWeight: 700,
-              color: colors.greenAccent[500],
+              color: colors.grey[200],
               textDecoration: "none",
             }}
           >

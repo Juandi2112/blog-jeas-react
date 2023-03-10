@@ -5,9 +5,11 @@ import Footer from "../../components/Footer";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 
 const tweets = [
-  "1512075344269832196",
+  "1629133258893012993",
+  "1629884212395270145",
   "1633282770960089088",
-  "1633253625517441027",
+  "1512075344269832196",
+  "1633253625517441027"
 ];
 
 const Tweet = () => {
