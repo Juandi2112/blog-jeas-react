@@ -18,6 +18,8 @@
     "react-twitter-embed": "^4.0.4",
     "web-vitals": "^2.1.4"
   },
+
+  "homepage":"https://juanestebanaristizabals.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

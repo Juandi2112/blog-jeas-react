@@ -1,10 +1,47 @@
-import { Box, IconButton } from "@mui/material";
+import { useState, useEffect } from "react";
+import { Box, IconButton, Snackbar } from "@mui/material";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SchoolIcon from "@mui/icons-material/School";
 import EmailIcon from "@mui/icons-material/Email";
 
 const ContactInfo = () => {
+  const [copied, setCopied] = useState(false);
+  const [screenSize, setScreenSize] = useState(null);
+
+  useEffect(() => {
+    function handleResize() {
+      setScreenSize(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleCopyClick = () => {
+    const textToCopy = "jaristizabals@unal.edu.co";
+    navigator.clipboard.writeText(textToCopy);
+    setCopied(true);
+  };
+
+  const handleSnackbarClose = () => {
+    setCopied(false);
+  };
+
+  const isMobile = () => {
+    return screenSize && screenSize <= 768;
+  };
+
+  const handleEmailClick = () => {
+    if (isMobile()) {
+      window.location.href = "mailto:jaristizabals@unal.edu.co";
+    } else {
+      handleCopyClick();
+    }
+  };
+
   return (
     <Box
       alignItems="center"
@@ -27,9 +64,20 @@ const ContactInfo = () => {
       >
         <SchoolIcon fontSize="large" />
       </IconButton>
-      <IconButton href="mailto:jaristizabals@unal.edu.co" target="_blank">
-        <EmailIcon fontSize="large" />
+      <IconButton onClick={handleEmailClick}>
+        <EmailIcon fontSize="large"/>
       </IconButton>
+      <Snackbar
+        open={copied}
+        message="Correo copiado al portapapeles"
+        onClose={handleSnackbarClose}
+        autoHideDuration={2000}
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'center',
+
+        }}
+      />
     </Box>
   );
 };

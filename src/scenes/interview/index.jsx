@@ -29,6 +29,14 @@ const Interview = () => {
       <CoverImage title="Entrevistas" image={imag.img14} />
       <TextFl />
       <InterviewList
+        img={imag.img40}
+        link="https://soundcloud.com/umcentral-umfm/movilidad-matutino-marzo-10?si=128d1d0309d5418c8bd152bc29a0b047&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        index="21"
+        tema="Entrevista sobre movilidad de mujeres en Manizales"
+        medio="UMFM"
+        fecha="Marzo/2023"
+      />
+      <InterviewList
         img={imag.img37}
         link="https://centrodeinformacion.manizales.gov.co/hombres-o-mujeres-quienes-son-mas-prudentes-a-la-hora-de-conducir-les-contamos-en-esta-nota/"
         index="20"

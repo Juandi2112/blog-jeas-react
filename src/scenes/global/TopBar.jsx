@@ -17,6 +17,7 @@ import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkmModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
 import MenuIcon from "@mui/icons-material/Menu";
+import imag from "../../assets/imga";
 
 const Topbar = () => {
   const theme = useTheme();
@@ -34,12 +35,12 @@ const Topbar = () => {
   };
 
   return (
-    <AppBar position="fixed" >
-      <Container maxWidth="xl" >
-        <Toolbar disableGutters > 
-          <DirectionsBikeIcon
-            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-          />
+    <AppBar position="fixed">
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
+            <img src={imag.img38} width="25px" />
+          </Box>
           <Typography
             variant="h4"
             noWrap
@@ -120,9 +121,9 @@ const Topbar = () => {
               </MenuItem>
             </Menu>
           </Box>
-          <DirectionsBikeIcon
-            sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
-          />
+          <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
+            <img src={imag.img38} width="22px" />
+          </Box>
           <Typography
             variant="h6"
             noWrap
@@ -132,9 +133,9 @@ const Topbar = () => {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-             
+
               fontWeight: 700,
-              color: colors.grey[200],
+              color: colors.grey[100],
               textDecoration: "none",
             }}
           >
@@ -230,7 +231,10 @@ const Topbar = () => {
             backgroundColor={colors.primary[900]}
             borderRadius="3px"
           >
-            <IconButton onClick={colorMode.toggleColorMode} sx={{ "&:hover": {borderRadius:0}}}>
+            <IconButton
+              onClick={colorMode.toggleColorMode}
+              sx={{ "&:hover": { borderRadius: 0 } }}
+            >
               {theme.palette.mode === "dark" ? (
                 <LightModeOutlinedIcon />
               ) : (

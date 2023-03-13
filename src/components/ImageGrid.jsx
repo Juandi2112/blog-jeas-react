@@ -36,3 +36,5 @@ const ImageGrid = ({ img1, img2, img3 }) => {
 };
 
 export default ImageGrid;
+
+            
