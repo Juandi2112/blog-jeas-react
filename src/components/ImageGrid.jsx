@@ -13,7 +13,7 @@ const ImageGrid = ({ img1, img2, img3 }) => {
   const imageStyle = {
     width: "100%",
     height: "90vh",
-    objectFit: "cover",
+    objectFit: "contain",
   };
 
   return (
@@ -36,5 +36,3 @@ const ImageGrid = ({ img1, img2, img3 }) => {
 };
 
 export default ImageGrid;
-
-            
