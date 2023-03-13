@@ -2,7 +2,7 @@
 Showing her personal information, contact info, some of his interviews and outstanding achievements.
 
 
-[domain/](https://www.google.com/)
+[https://juanestebanaristizabals.com](https://juanestebanaristizabals.com)
 
 
 ## Stack
