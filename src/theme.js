@@ -212,15 +212,3 @@ export const useMode = () => {
 
   return [theme, colorMode];
 };
-
-/* white: {
-       100: "#fcfaf8",
-       200: "#f9f5f1",
-       300: "#f6f1e9",
-       400: "#f3ece2",
-       500: "#f0e7db",
-       600: "#c0b9af",
-       700: "#908b83",
-       800: "#605c58",
-       900: "#302e2c"
-}, */

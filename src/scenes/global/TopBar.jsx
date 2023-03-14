@@ -9,13 +9,13 @@ import {
   Container,
   Button,
   MenuItem,
+  Popover
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { ColorModeContext, tokens } from "../../theme";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkmModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
 import MenuIcon from "@mui/icons-material/Menu";
 import imag from "../../assets/imga";
 
@@ -34,12 +34,60 @@ const Topbar = () => {
     setAnchorElNav(null);
   };
 
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+
+  useEffect(() => {
+    let timeoutId = null;
+    if (isPopoverOpen) {
+      timeoutId = setTimeout(() => {
+        setIsPopoverOpen(false);
+        handleClosePopover();
+      }, 2000);
+    }
+
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [isPopoverOpen]);
+
+  const handleOpenPopover = (event) => {
+    setAnchorEl(event.currentTarget);
+    setIsPopoverOpen(true);
+  };
+
+  const handleClosePopover = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
-            <img src={imag.img38} width="25px" />
+            <IconButton onClick={handleOpenPopover}>
+              <img src={imag.img38} width="25px" alt="peatón cruzando" />
+            </IconButton>
+            <Popover
+              id="popover"
+              open={isPopoverOpen}
+              anchorEl={anchorEl}
+              onClose={handleClosePopover}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "center",
+              }}
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "center",
+              }}
+            >
+              <Box sx={{ p: 2 }}>
+                <Typography>¡Peatones primero!</Typography>
+              </Box>
+            </Popover>
           </Box>
           <Typography
             variant="h4"
@@ -122,7 +170,27 @@ const Topbar = () => {
             </Menu>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
-            <img src={imag.img38} width="22px" />
+          <IconButton onClick={handleOpenPopover}>
+              <img src={imag.img38} width="25px" alt="peatón cruzando"/>
+            </IconButton>
+            <Popover
+              id="popover"
+              open={isPopoverOpen}
+              anchorEl={anchorEl}
+              onClose={handleClosePopover}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "center",
+              }}
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "center",
+              }}
+            >
+              <Box sx={{ p: 2 }}>
+                <Typography>¡Peatones primero!</Typography>
+              </Box>
+            </Popover>
           </Box>
           <Typography
             variant="h6"
@@ -164,7 +232,8 @@ const Topbar = () => {
                   color: "#868dfb !important",
                   textDecoration: "underline 1.5px",
                 },
-                fontSize: "13px",
+                fontSize: "14px",
+                textTransform:"none"
               }}
             >
               Inicio
@@ -182,7 +251,8 @@ const Topbar = () => {
                   color: "#868dfb !important",
                   textDecoration: "underline 1.5px",
                 },
-                fontSize: "13px",
+                fontSize: "14px",
+                textTransform:"none"
               }}
             >
               Acerca de mí
@@ -201,7 +271,8 @@ const Topbar = () => {
                   color: "#868dfb !important",
                   textDecoration: "underline 1.5px",
                 },
-                fontSize: "13px",
+                fontSize: "14px",
+                textTransform:"none"
               }}
             >
               Entrevistas
@@ -220,7 +291,8 @@ const Topbar = () => {
                   color: "#868dfb !important",
                   textDecoration: "underline 1.5px",
                 },
-                fontSize: "13px",
+                fontSize: "14px",
+                textTransform:"none"
               }}
             >
               Consignas

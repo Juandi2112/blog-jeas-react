@@ -33,8 +33,9 @@ const CoverImage = ({ image, title }) => {
   const nextSectionRef = useRef(null);
 
   const handleArrowDownClick = () => {
-    const nextSectionPosition = nextSectionRef.current.getBoundingClientRect();
-    const scrollPosition = nextSectionPosition.y - 64;
+    const nextSection = nextSectionRef.current;
+    const nextSectionPosition = nextSection.offsetTop - nextSection.parentElement.offsetTop;
+    const scrollPosition = nextSectionPosition - 64;
     window.scrollTo({ top: scrollPosition, behavior: "smooth" });
   };
 
