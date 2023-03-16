@@ -15,7 +15,7 @@ const tweets = [
 const Tweet = () => {
   return (
     <Box>
-      <CoverImage title="Consignas" image={imag.img6} />
+      <CoverImage title="Consignas" image={imag.img6} opa="0.3"/>
       <Grid container spacing={2} justifyContent="center" mt="2rem">
         {tweets.map((tweetId) => (
           <Grid key={tweetId} item xs={12} sm={6} md={4}>

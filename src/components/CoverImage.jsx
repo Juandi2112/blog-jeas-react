@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { Box, IconButton, Typography } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-const CoverImage = ({ image, title }) => {
+const CoverImage = ({ image, title, opa }) => {
   const containerStyle = {
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -19,7 +19,7 @@ const CoverImage = ({ image, title }) => {
     backgroundPosition: "center",
     height: "100%",
     width: "100%",
-    opacity: 0.3,
+    opacity:`${opa}`,
   };
 
   const textStyle = {

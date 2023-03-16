@@ -26,7 +26,7 @@ const TextFl = () => {
 const Interview = () => {
   return (
     <Box>
-      <CoverImage title="Entrevistas" image={imag.img14} />
+      <CoverImage title="Entrevistas" image={imag.img14} opa="0.3"/>
       <TextFl />
       <InterviewList
         img={imag.img40}

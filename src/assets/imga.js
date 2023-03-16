@@ -1,9 +1,7 @@
 import img1 from "./img/1.jpg";
-import img3 from "./img/3.jpg";
 import img4 from "./img/4.jpg";
 import img5 from "./img/5.jpg";
 import img6 from "./img/6.jpg";
-import img7 from "./img/7.jpg";
 import img11 from "./img/11.jpg";
 import img12 from "./img/12.jpg";
 import img14 from "./img/14.jpg";
@@ -31,16 +29,14 @@ import img35 from "./img/35.png";
 import img36 from "./img/36.jpg";
 import img37 from "./img/37.jpeg";
 import img38 from "./img/38.png";
-import img39 from "./img/39.png";
 import img40 from "./img/40.png";
+import img41 from "./img/41.png";
 
 export default {
   img1: img1,
-  img3: img3,
   img4: img4,
   img5: img5,
   img6: img6,
-  img7: img7,
   img11: img11,
   img12: img12,
   img14: img14,
@@ -68,6 +64,6 @@ export default {
   img36: img36,
   img37: img37,
   img38: img38,
-  img39: img39,
   img40: img40,
+  img41: img41,
 };

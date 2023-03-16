@@ -10,7 +10,7 @@ import InfoContainer from "../../components/InfoContainer";
 const Index = () => {
   return (
     <Box>
-      <CoverImage title="Inicio" image={imag.img1} />
+      <CoverImage title="Inicio" image={imag.img1} opa="0.3" />
       <InfoContainer img={imag.img5}/>
       <SeparatorBar title="Contacto" />
       <ContactInfo />

@@ -50,7 +50,7 @@ const TextFl = () => {
 const About = () => {
   return (
     <Box>
-      <CoverImage title="Acerca de mí" image={imag.img7} />
+      <CoverImage title="Acerca de mí" image={imag.img41} opa="0.4"/>
       <TextFl />
       <SeparatorBar title="Hoja de vida" />
       <PdfViewer />
