@@ -34,3 +34,5 @@ MIT License.
 Check out [LICENSE](./LICENSE) for more detail.
 
 ---
+
+Pedestrian crossing icon was designed by flaticon.com
