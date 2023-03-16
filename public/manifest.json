@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Juan Esteban Aristizábal",
+  "name": "Website for Juan Esteban Aristizábal Salazar",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,13 +10,9 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "180x180"
     }
+
   ],
   "start_url": ".",
   "display": "standalone",
