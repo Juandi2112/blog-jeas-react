@@ -17,8 +17,7 @@ const TextFl = () => {
       >
         Investigador en movilidad urbana de la Universidad Nacional de Colombia.
         Estudiante de Maestría en Ingeniería - Infraestructura y Sistemas de
-        Transporte. Ingeniero civil y a espera de grado como Especialista en
-        Vías y Transporte (plan de estudios finalizado).
+        Transporte. Ingeniero civil Especialista en Vías y Transporte.
       </Typography>
       <Typography
         variant="h4"
@@ -50,7 +49,7 @@ const TextFl = () => {
 const About = () => {
   return (
     <Box>
-      <CoverImage title="Acerca de mí" image={imag.img41} opa="0.4"/>
+      <CoverImage title="Acerca de mí" image={imag.img41} opa="0.4" />
       <TextFl />
       <SeparatorBar title="Hoja de vida" />
       <PdfViewer />

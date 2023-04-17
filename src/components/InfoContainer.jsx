@@ -35,7 +35,10 @@ const InfoContainer = ({ img }) => {
               Transporte
             </Typography>
             <Typography variant="h4" marginTop="20px">
-              Ingeniero Civil Universidad Nacional de Colombia
+              Ingeniero Civil Especialista en Vías y Transporte
+            </Typography>
+            <Typography variant="h4" marginTop="20px">
+              Universidad Nacional de Colombia
             </Typography>
           </Box>
         </Grid>
