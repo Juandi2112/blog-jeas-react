@@ -29,6 +29,78 @@ const Interview = () => {
       <CoverImage title="Entrevistas" image={imag.img14} opa="0.3"/>
       <TextFl />
       <InterviewList
+        img={imag.img50}
+        link="https://centrodeinformacion.manizales.gov.co/secretaria-de-movilidad-participo-del-xxi-congreso-internacional-de-transporte-con-un-articulo-de-investigacion/"
+        index="30"
+        tema="Artículo de seguridad vial con ciencia de datos espaciales"
+        medio="Prensa Alcaldía de Manizales"
+        fecha="Agosto/2023"
+      />
+            <InterviewList
+        img={imag.img49}
+        link="https://www.lapatria.com/informe-especial/manizales-en-mora-con-los-adultos-mayores-se-requieren-mejores-vias-y-servicios-de"
+        index="29"
+        tema="Movilidad de adultos mayores en Manizales"
+        medio="La Patria Manizales"
+        fecha="Agosto/2023"
+      />
+            <InterviewList
+        img={imag.img48}
+        link="https://www.youtube.com/watch?v=EfPnOK520eI"
+        index="28"
+        tema="Seguridad en la movilidad, cifras en Caldas - Minuto 3:21"
+        medio="La Patria Manizales"
+        fecha="Agosto/2023"
+      />
+            <InterviewList
+        img={imag.img47}
+        link="https://docs.google.com/viewerng/viewer?url=https://manizalescomovamos.org/wp-content/uploads/2023/08/ICV-2022-Infografia.pdf"
+        index="27"
+        tema="Informe de Calidad de Vida Manizales 2022 - Pág.50"
+        medio="Manizales Cómo Vamos"
+        fecha="Agosto/2023"
+      />
+            <InterviewList
+        img={imag.img46}
+        link="https://centrodeinformacion.manizales.gov.co/para-proteger-a-los-peatones-intervienen-giro-en-la-avenida-santander-en-el-sector-de-el-cable/"
+        index="26"
+        tema="Intervención de urbanismo táctico"
+        medio="Prensa Alcaldía de Manizales"
+        fecha="Julio/2023"
+      />
+            <InterviewList
+        img={imag.img45}
+        link="https://www.lapatria.com/economia/sistema-de-bicicletas-publicas-de-manizales-todavia-sin-pedalear?fbclid=IwAR04XD5B1u0UWDLqGTlzXAdhiMl0ZKhxt8gUV4Jz8ZjA_qq0PnJ6bB7PPEo"
+        index="25"
+        tema="Sistema de Bicicletas Públicas"
+        medio="La Patria Manizales"
+        fecha="Junio/2023"
+      />
+            <InterviewList
+        img={imag.img44}
+        link="https://www.lapatria.com/informe-especial/congestion-vial-cobra-protagonismo-en-accidentes-fatales-experto-en-movilidad?fbclid=IwAR17Glp4HucRyPMyesaGIhLZ_lbpSzQQtDvr_koOkpgNu-_5yKv-lL7tLOE"
+        index="24"
+        tema="Congestión vial y seguridad en la movilidad"
+        medio="La Patria Manizales"
+        fecha="Junio/2023"
+      />
+            <InterviewList
+        img={imag.img43}
+        link="https://soundcloud.com/juan-esteban-aristizabal-salazar/entrevista-sobre-cifras-de-siniestralidad-vial-en-manizales-y-colombia?si=0b077afe340041fa91fb0ba813ab1048&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        index="23"
+        tema="Cifras de siniestralidad vial en Manizales y Colombia"
+        medio="UMFM"
+        fecha="Mayo/2023"
+      />
+      <InterviewList
+        img={imag.img42}
+        link="https://www.facebook.com/Jeas002/posts/3458114481070428"
+        index="22"
+        tema="Percepción de movilidad Manizales Cómo Vamos"
+        medio="La Patria Manizales"
+        fecha="Abril/2023"
+      />
+      <InterviewList
         img={imag.img40}
         link="https://soundcloud.com/umcentral-umfm/movilidad-matutino-marzo-10?si=128d1d0309d5418c8bd152bc29a0b047&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         index="21"

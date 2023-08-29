@@ -19,7 +19,7 @@ const CoverImage = ({ image, title, opa }) => {
     backgroundPosition: "center",
     height: "100%",
     width: "100%",
-    opacity:`${opa}`,
+    opacity: `${opa}`,
   };
 
   const textStyle = {
@@ -29,12 +29,12 @@ const CoverImage = ({ image, title, opa }) => {
     fontWeight: "bold",
   };
 
-
   const nextSectionRef = useRef(null);
 
   const handleArrowDownClick = () => {
     const nextSection = nextSectionRef.current;
-    const nextSectionPosition = nextSection.offsetTop - nextSection.parentElement.offsetTop;
+    const nextSectionPosition =
+      nextSection.offsetTop - nextSection.parentElement.offsetTop;
     const scrollPosition = nextSectionPosition - 64;
     window.scrollTo({ top: scrollPosition, behavior: "smooth" });
   };
@@ -42,7 +42,7 @@ const CoverImage = ({ image, title, opa }) => {
   return (
     <Box>
       <Box style={containerStyle}>
-        <Box style={imageStyle}/>
+        <Box style={imageStyle} />
         <Typography variant="h2" style={textStyle}>
           {title}
         </Typography>

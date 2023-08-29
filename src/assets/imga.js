@@ -31,6 +31,15 @@ import img37 from "./img/37.jpeg";
 import img38 from "./img/38.png";
 import img40 from "./img/40.png";
 import img41 from "./img/41.png";
+import img42 from "./img/42.jpg";
+import img43 from "./img/43.jpg";
+import img44 from "./img/44.jpg";
+import img45 from "./img/45.jpg";
+import img46 from "./img/46.jpg";
+import img47 from "./img/47.png";
+import img48 from "./img/48.png";
+import img49 from "./img/49.jpg";
+import img50 from "./img/50.jpg";
 
 export default {
   img1: img1,
@@ -66,4 +75,13 @@ export default {
   img38: img38,
   img40: img40,
   img41: img41,
+  img42: img42,
+  img43: img43,
+  img44: img44,
+  img45: img45,
+  img46: img46,
+  img47: img47,
+  img48: img48,
+  img49: img49,
+  img50: img50,
 };

@@ -149,7 +149,7 @@ const Topbar = () => {
                 key="about"
                 onClick={handleCloseNavMenu}
               >
-                <Typography textAlign="center">Acerca de mí</Typography>
+                <Typography textAlign="center">Acerca de</Typography>
               </MenuItem>
               <MenuItem
                 component={Link}
@@ -241,7 +241,7 @@ const Topbar = () => {
 
             <Button
               component={Link}
-              key="acerca de mí"
+              key="acerca de"
               onClick={handleCloseNavMenu}
               to="/about"
               sx={{
@@ -255,7 +255,7 @@ const Topbar = () => {
                 textTransform:"none"
               }}
             >
-              Acerca de mí
+              Acerca de
             </Button>
 
             <Button
