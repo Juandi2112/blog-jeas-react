@@ -29,6 +29,14 @@ const Interview = () => {
       <CoverImage title="Entrevistas" image={imag.img14} opa="0.3"/>
       <TextFl />
       <InterviewList
+        img={imag.img51}
+        link="https://intranet.manizales.unal.edu.co/postmaster/2023/postadjunto31745.pdf"
+        index="31"
+        tema="Ponencia en el XXII PANAM Guayaquil 2023 - Página 6"
+        medio="Boletín de Sede UNAL Manizales"
+        fecha="Agosto/2023"
+      />
+      <InterviewList
         img={imag.img50}
         link="https://centrodeinformacion.manizales.gov.co/secretaria-de-movilidad-participo-del-xxi-congreso-internacional-de-transporte-con-un-articulo-de-investigacion/"
         index="30"

@@ -40,6 +40,7 @@ import img47 from "./img/47.png";
 import img48 from "./img/48.png";
 import img49 from "./img/49.jpg";
 import img50 from "./img/50.jpg";
+import img51 from "./img/51.jpg";
 
 export default {
   img1: img1,
@@ -84,4 +85,5 @@ export default {
   img48: img48,
   img49: img49,
   img50: img50,
+  img51: img51,
 };
