@@ -9,7 +9,7 @@ const PdfViewer = () => {
       <CardMedia
         component="iframe"
         title="PDF Preview"
-        src={`https://drive.google.com/file/d/1Ayt9RXK97KvWxnm2MXRUNYqFncv4ch4b/preview`}
+        src={`https://drive.google.com/file/d/1LckFryxSfpuq5agD9ZZcxBjgIKUguGgf/preview`}
         style={{
           width: isSmallScreen ? "100%" : "50%",
           height: "88vh",
